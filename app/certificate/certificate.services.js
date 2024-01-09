@@ -9,7 +9,7 @@ export const getCertificate = async (req, res) => {
     try {
         const cert = await db.collection(certificateCollection).findOne({ "courseDetails.certificateID": certId });
         if(cert){
-            return res.status(200).json({success:true, data: cert});
+            return res.status(200).json({success:true, data: {courseDetails: cert.courseDetails, userName: cert.userName}});
         }
         return res.status(200).json({ success: false, message: "Certificate not exist!"});
     } catch (err) {
