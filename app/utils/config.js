@@ -16,8 +16,8 @@ const CONFIG =  {
         USER_VALIDATION_COLLECTION: process.env.USER_VALIDATION_COLLECTION,
         IK_PUBLIC_KEY: process.env.IK_PUBLIC_KEY,
         IK_PRIVATE_KEY: process.env.IK_PRIVATE_KEY,
-        OTP_VALID_MIN: process.env.OTP_VALID_MIN,
-        SALT: process.env.SALT,
+        OTP_VALID_MIN: Number.parseInt(process.env.OTP_VALID_MIN),
+        SALT: Number.parseInt(process.env.SALT),
         IK_CERTFICATE_FOLDER: process.env.IK_CERTFICATE_FOLDER,
 }
 
